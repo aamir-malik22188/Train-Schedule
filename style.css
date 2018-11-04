@@ -1,0 +1,26 @@
+body{
+    background-color: lightgrey;
+}
+
+.jumbotron{
+    display: flex;
+    justify-content: center;
+    background-color: #529598;
+    color: lightgrey;
+}
+
+
+#trainCard{
+    display: inline-block;
+    justify-content: center;
+    width: 100%;
+    
+    
+}
+
+#trainInput{
+    justify-content: center;
+    display: flex;;
+    width: 25%;
+    padding: 20px;
+}

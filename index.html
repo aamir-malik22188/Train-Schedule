@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Schedule</title>
+
+     <!-- Firebase -->
+     <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+
+    <!-- CSS and Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Jquery CDN and JS Link-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+
+    <!-- MomentJS CDN -->
+    <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
+
+</head>
+<body>
+
+    <!-- Jumbotron -->
+<div class="jumbotron jumbotron-fluid">
+    <div class="container" id="jumbotronText">
+        <h1 class="display-4">Train Schedule</h1>
+            <p class="lead">Add the train schedule below</p>
+    </div>
+</div>
+
+<!-- Card to hold train schedule -->
+<div class="container-fluid">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="card mb-4" id="trainCard">
+                <div class="card-header">Train Schedule</div>
+                
+                    <table class="table" id="trainTable">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Train Name</th>
+                                <th scope="col">Destination</th>
+                                <th scope="col">Frequency</th>
+                                <th scope="col">Next Arrival</th>
+                                <th scope="col">Minutes Away</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- User input -->
+<div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card" id="trainInput">
+                <form>
+                        <div class="form-group">
+                          <label for="trainName">Train Name</label>
+                          <input type="text" class="form-control" id="trainName"  placeholder="Enter Train Name">
+                        </div>
+                        <div class="form-group">
+                          <label for="destinationName">Destination</label>
+                          <input type="text" class="form-control" id="destinationName" placeholder="Enter Destination">
+                        </div>
+                        <div class="form-group">
+                          <label for="firstTrain">First Train Time (HH:mm - Military Time)</label>
+                          <input type="time" class="form-control" id="firstTrain" placeholder="Enter Train Time">
+                        </div>
+                        <div class="form-group">
+                          <label for="frequency">Fequency (minutes)</label>
+                          <input type="number" class="form-control" id="frequency" placeholder="Enter Frequency">
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+                      </form>
+                      </div>
+        </div>
+    </div>
+</div>
+
+    
+</body>
+</html>
