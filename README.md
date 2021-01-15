@@ -8,10 +8,10 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Train Scheduler</h3>
+  <h2 align="center">Train Scheduler</h2>
 
   <p align="center">
-    A CRUD Application
+    A CRUD Application with Firebase
     <br />
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>

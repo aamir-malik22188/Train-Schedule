@@ -1,3 +1,4 @@
+// Initiate Firebase Connection
 var config = {
     apiKey: "AIzaSyAhWT29pbLibfDSzwWK9ac_ewfINESu9wo",
     authDomain: "train-schedule-eb0d7.firebaseapp.com",
@@ -21,12 +22,14 @@ var destinationName = $("#destinationName").val();
 var firstTrain = moment($("#firstTrain").val(), "h:mm:ss a").format("X");
 var frequency = $("#frequency").val();
 
+// Console Log inputs
 console.log(trainName);
 console.log(destinationName);
 console.log(firstTrain);
 console.log(frequency);
 
 
+// Temporary holding of new train information
 var newTrain = {
     name: trainName,
     destination: destinationName,
@@ -34,9 +37,10 @@ var newTrain = {
     freq: frequency
 };
 
+// Push input to Firebase
 database.ref().push(newTrain);
 
-    // log the values
+    // log the values that will be recieved in Firebase
     console.log(trainName);
     console.log(destinationName);
     console.log(firstTrain);
@@ -50,6 +54,7 @@ $("#firstTrain").val("");
 $("#frequency").val("")
 });
 
+
 database.ref().on("child_added", function(childSnapshot, prevChildKey){
     console.log(childSnapshot.val());
 
@@ -59,6 +64,7 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey){
     var frequency = childSnapshot.val().freq;
     var minutesAway = moment().diff(moment(firstTrain, "X"), "minutes");
   
+
   // Create the new row
   var newRow = $("<tr>").append(
     $("<td>").text(trainName),
@@ -69,24 +75,31 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey){
 
   );
 
-  // process for calculating the Next Arrival and Minutes Away fields...
-  // make sure the first train time is after the eventual current time
+
+  
+
+  // Utilizing Moment.js to calculate time
   var firstTrainTime = moment(firstTrain, "hh:mm a").subtract(1, "years");
-  // store variable for current time
+  
+  // Variable for current times
   var currentTime = moment().format("HH:mm a");
   console.log("Current Time:" + currentTime);
-  // store variable for difference of current time and first train time
+
+  // Variable to calculate the difference between current time and time of first train
   var trnTimeCurrentTimeDiff = moment().diff(moment(firstTrainTime), "minutes");
-  // store the time left
+
+  // Time remaining
   var timeLeft = trnTimeCurrentTimeDiff % frequency;
-  // calculate and store the minutes until next train arrives
+  
+  // Holding for minutes until the train arrives
   var minutesAway = frequency - timeLeft;
-  // calculate the next arriving train
+
+  // Next train arrival minutes
   var nextArrival = moment().add(minutesAway, "minutes").format("hh:mm a");
 
  
   // Append the new row to the table
-  $("#trainTable > tbody").append("<tr><td>" + trainName + 
+  $("#trainTable > tbody").prepend("<tr><td>" + trainName + 
                                   "</td><td>" + destinationName + 
                                   "</td><td>" + frequency + 
                                   "</td><td>" + nextArrival + 
@@ -95,4 +108,3 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey){
 });
 
 
-// alert("New Train Added");

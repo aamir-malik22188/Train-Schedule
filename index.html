@@ -63,11 +63,11 @@
                             <input type="text" class="form-control" id="destinationName" placeholder="Enter Destination">
                         </div>
                         <div class="form-group">
-                            <label for="firstTrain">First Train Time (HH:mm - Military Time)</label>
+                            <label for="firstTrain">First Train Time (Military Time)</label>
                             <input type="time" class="form-control" id="firstTrain" placeholder="Enter Train Time">
                         </div>
                         <div class="form-group">
-                            <label for="frequency">Fequency (minutes)</label>
+                            <label for="frequency">Fequency (Minutes)</label>
                             <input type="number" class="form-control" id="frequency" placeholder="Enter Frequency">
                         </div>
                         <button type="submit" class="btn btn-primary" id="submit">Submit</button>
@@ -77,10 +77,14 @@
     </div>
 </div>
 
+</section>
+
+<section id="trainTableSection">
+
 <!-- Card to hold train schedule -->
-<div class="container-fluid" id="trainTableSection">
+<div class="container-fluid" >
     <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
+        <div class="col-sm-12 col-md-12 col-lg-12" >
             <div class="card mb-4" id="trainCard">
                 <div class="card-header">Train Schedule</div> 
                     <table class="table" id="trainTable">
@@ -96,19 +100,19 @@
                         <tbody>
                         </tbody>
                     </table>
-                </div>
-        
-            </div>
+            </div>       
         </div>
     </div>
 </div>
 
-
 </section>
 
 
-<footer>
-    This project is created for portfolio purposes
+
+<footer class="footer">
+    <span >This project was created for Portfolio Purpose</span>
+    <br>
+    <span >Github Repo: <a href="https://github.com/aamir-malik22188/Train-Schedule">Click Here</a> </span>   
 </footer>
 
 
@@ -119,13 +123,13 @@
 
 
 </body>
+
  <!-- Firebase -->
  <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
 
 <!-- Jquery CDN and JS Link-->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="app.js"></script>
-<script type ="module" src="firebase.js"></script>
 
 <!-- MomentJS CDN -->
 <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
