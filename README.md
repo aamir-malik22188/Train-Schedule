@@ -1,5 +1,4 @@
 <!-- PROJECT LOGO -->
-
   <h1 align="center">Train Scheduler</h1>
 
   <p align="center">
@@ -65,8 +64,6 @@ The following frameworks were used to complete the project.
 * [Firebase Database](https://firebase.google.com/docs/database)
 * [Firebase Hosting](https://firebase.google.com/docs/hosting)
 
-
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
@@ -78,11 +75,6 @@ A live demo of the project and be accessed at this [link](https://train-schedule
    ```sh
    git clone https://github.com/aamir-malik22188/Train-Schedule.git
 4. Start Application
-
-
-
-
-
 
 <!-- CONTACT -->
 ## Contact
@@ -103,8 +95,3 @@ Project Repository: https://github.com/aamir-malik22188/Train-Schedule
 * [MomentJS](https://momentjs.com/)
 * [Firebase](https://firebase.google.com/)
 * [SMU Bootcamp](https://techbootcamps.smu.edu/)
-
-
-
-
-
