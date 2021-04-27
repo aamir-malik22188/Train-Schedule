@@ -71,7 +71,8 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey){
     $("<td>").text(destinationName),
     $("<td>").text(frequency),
     $("<td>").text(firstTrain),
-    $("<td>").text(minutesAway) 
+    $("<td>").text(minutesAway)
+
 
   );
 
