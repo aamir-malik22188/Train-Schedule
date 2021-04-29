@@ -41,7 +41,7 @@ main {
 .jumbotron h1{
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: bolder;
-
+    text-shadow: none !important;
 }
 
 .jumbotron p{
@@ -49,6 +49,7 @@ main {
     font-weight: bolder;
     font-size: 3rem;
     text-align: left;
+    text-shadow: none !important;
 }
 
 .lead{
